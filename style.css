@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: red;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    gap: 20px;
+}
+
+.container{
+    background-color: silver;
+    padding: 40px;
+    border-radius: 1rem;
+
+    width: 600px;
+    box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.51);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.container .pTag{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.input{
+    display: flex;
+    width: 101%;
+}
+.input input{
+    flex: 1;  /* to flex 1 is to cover the whole area */
+    padding: 10px 10px;
+    background-color: #b1e9ff;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.input button{
+    background-color: #3dc8ff;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    padding: 0px 20px;
+}
