@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 *{
+
     padding: 0;
     margin: 0;
 }
 
 body {
+    font-family: "Mulish";
+    font-weight: 100;
     min-height: 100vh;
 
     background-image:
@@ -49,7 +54,7 @@ main{
 
 .container{
     background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(15px);
 
     padding: 40px;
@@ -67,11 +72,12 @@ main{
 }
 .container h1{
     font-size: 38px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .container .pTag{
     width: 100%;
     margin-bottom: 5px;
+    font-weight: normal;
 }
 
 .input{
@@ -80,6 +86,7 @@ main{
     width: 101%;
 }
 .input input{
+    font-family: "Mulish";
     flex: 1;  /* to flex 1 is to cover the whole area */
     padding: 10px 10px;
     background-color: #b1e9ff;
@@ -88,7 +95,9 @@ main{
     border-bottom-left-radius: 15px;
 }
 .input button{
+    font-family: "Mulish";
     background-color: #3dc8ff;
+    color: rgb(255, 255, 255);
     border: none;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -104,7 +113,7 @@ main{
 .items h4{
     text-align: center;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 .items ul{
@@ -125,6 +134,9 @@ main{
     transform: translateY(-10px);
     transition: all 0.23s;
 }
+.items ul li p{
+    font-weight: normal;
+}
 .items ul li.show {
   opacity: 1;                             /* for js */
   transform: translateY(0);
@@ -137,6 +149,7 @@ main{
 }
 
 .clearAll{
+    font-family: "Mulish";
     border: 1px solid #92dffd;
     background-color: transparent;
     padding: 10px 40px;
@@ -146,8 +159,12 @@ main{
     cursor: pointer;
 }
 
-
-
 .name{
-    color:silver;
+    color:rgb(112, 112, 112);
+    font-weight: normal;
+    text-align: center;
 }
+
+
+
+/* TODO: Add Media Queries */
