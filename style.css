@@ -30,6 +30,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.23s;
 }
 .container h1{
     font-size: 38px;
@@ -86,6 +87,14 @@ main{
     justify-content: space-between;
     padding: 5px 15px;
     border-radius: 15px;
+
+    opacity: 0;                           /* for js */
+    transform: translateY(-10px);
+    transition: all 0.23s;
+}
+.items ul li.show {
+  opacity: 1;                             /* for js */
+  transform: translateY(0);
 }
 .items ul li button{
     border: none;

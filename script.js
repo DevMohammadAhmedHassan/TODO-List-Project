@@ -4,9 +4,6 @@ let submitBtn = document.querySelector(".input button");
 let clearAllBtn = document.querySelector(".clearAll");
 let taskList = document.querySelector("ul");
 
-
-
-
 // Functions
 
 const addTask = () => {
@@ -35,8 +32,12 @@ const addTask = () => {
 
   taskList.appendChild(newItem); // to add the new item.
 
+  setTimeout(() => {
+    newItem.classList.add("show");
+  }, 0);
+
   inputField.value = ""; // Clear the input field
-  inputField.focus();  //user can automatically type the nex task without clicking.
+  inputField.focus(); //user can automatically type the nex task without clicking.
 
   console.log("submit button clicked");
 
@@ -47,17 +48,20 @@ const addTask = () => {
     newItem.querySelector("p").style.textDecoration = "line-through";
   });
 
-  deleteTask.addEventListener("click", () => taskList.removeChild(newItem));
-};
+  deleteTask.addEventListener("click", () => {
+    newItem.classList.remove("show");  //for animation to work
 
+    setTimeout(() => {
+      taskList.removeChild(newItem);
+    }, 230);                           //delay for animation
+  });
+};
 
 const clearAllTasks = () => {
-    taskList.innerHTML = ""; //to clear the tasks!
+  taskList.innerHTML = ""; //to clear the tasks!
 
-    console.log("All Tasks Cleared");
+  console.log("All Tasks Cleared");
 };
-
-
 
 // Event Listeners
 submitBtn.addEventListener("click", addTask);
