@@ -3,8 +3,38 @@
     margin: 0;
 }
 
-body{
-    background-color: red;
+body {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(229, 231, 235, 0.8) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(229, 231, 235, 0.8) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle 500px at 20% 80%,
+            rgba(139, 92, 246, 0.3),
+            transparent
+        ),
+        radial-gradient(
+            circle 500px at 80% 20%,
+            rgba(59, 130, 246, 0.3),
+            transparent
+        );
+
+    background-size:
+        48px 48px,
+        48px 48px,
+        100% 100%,
+        100% 100%;
+
+    background-color: rgba(255, 255, 255, 0);
 }
 
 main{
@@ -18,7 +48,10 @@ main{
 }
 
 .container{
-    background-color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(15px);
+
     padding: 40px;
     border-radius: 1rem;
 
