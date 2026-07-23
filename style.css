@@ -157,6 +157,12 @@ main{
     margin-top: 20px;
 
     cursor: pointer;
+    transition: all 0.23s;
+}
+.clearAll:hover{
+    background-color: #3dc8ff;
+    color: white;
+
 }
 
 .name{
