@@ -73,4 +73,10 @@ const clearAllTasks = () => {
 
 // Event Listeners
 submitBtn.addEventListener("click", addTask);
+inputField.addEventListener("keydown", (event) => {  //for enter key
+  if (event.key === "Enter") {
+    addTask();
+  }
+});
+
 clearAllBtn.addEventListener("click", clearAllTasks);

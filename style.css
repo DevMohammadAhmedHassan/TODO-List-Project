@@ -71,7 +71,8 @@ main{
     transition: all 0.23s;
 }
 .container h1{
-    font-size: 38px;
+    /* font-size: 38px; */
+    font-size: clamp(3px, 8vw, 38px);
     margin-bottom: 40px;
 }
 .container .pTag{
@@ -82,12 +83,13 @@ main{
 
 .input{
     display: flex;
-    flex-wrap: wrap;
-    width: 101%;
+    width: 102%;
 }
 .input input{
     font-family: "Mulish";
     flex: 1;  /* to flex 1 is to cover the whole area */
+    min-width: 0; /* for responsiveness on mobile */ 
+    
     padding: 10px 10px;
     background-color: #b1e9ff;
     border: none;
@@ -170,7 +172,3 @@ main{
     font-weight: normal;
     text-align: center;
 }
-
-
-
-/* TODO: Add Media Queries */
